@@ -56,7 +56,8 @@ public class statusFragment extends Fragment implements View.OnClickListener{
                 textCount.setTextColor(Color.GREEN);
                 if(count<10)
                     textCount.setTextColor(Color.RED);
-                
+                else
+                	textCount.setTextColor(defaultTextColor);
             }
         });
 
