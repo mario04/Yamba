@@ -6,10 +6,14 @@ import winterwell.jtwitter.TwitterException;
 
 
 import android.app.Fragment;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -61,10 +65,7 @@ public class statusFragment extends Fragment implements View.OnClickListener{
             }
         });
 
-        Log.d(TAG, "Create twitter Object");
-        twitter = new Twitter("student","password");
-        twitter.setAPIRootUrl("http://yamba.marakana.com/api");
-        Log.d(TAG, "Set twitter object API root URL");
+        
 		return view;
     }
 
@@ -79,9 +80,21 @@ public class statusFragment extends Fragment implements View.OnClickListener{
 
         @Override
         protected String doInBackground(String... statuses) {
-            try{
-                Twitter.Status status = twitter.updateStatus(statuses[0]);
-                return status.text;
+        	try{
+            	SharedPreferences prefs = PreferenceManager
+            			.getDefaultSharedPreferences(getActivity()); //
+            			String username = prefs.getString("username", ""); //
+            			String password = prefs.getString("password", "");
+            			if (TextUtils.isEmpty(username) ||
+            			TextUtils.isEmpty(password)) { //
+            			getActivity().startActivity(
+            			new Intent(getActivity(), SettingsActivity.class));
+            			return "Please update your username and password";
+            			}
+            			twitter = new Twitter("student","password");
+            			twitter.setAPIRootUrl("http://yamba.marakana.com/api");
+            			Twitter.Status status = twitter.updateStatus(statuses[0]);
+            			return status.text;
             }catch (TwitterException e){
                 Log.e(TAG, e.toString());
                 e.printStackTrace();

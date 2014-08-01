@@ -6,5 +6,19 @@
     <string name="hint_status">What\'s going on?</string>
     <string name="action_settings">Settings</string>
     <string name="caracteres">140</string>
+    <string name="username">Username</string>
+    <string name="titleUsername">TitleUsarname</string>
+    <string name="summaryUsername">SummaryUsername</string>
+    <string name="username_summary">TODO</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="status_update">Yamba</string>
+    <string name="tweet">Tweet</string>
+    <string name="regresh">Refresh</string>
+    <string name="purge">Purge</string>
+    <string name="password">Password</string>
+    <string name="password_summary">Password_summary</string>
+    <string name="apiRoot">ApiRoot</string>
+    <string name="apiRoot_Summary">ApiRoot_Summary</string>
 
 </resources>
