@@ -3,9 +3,6 @@ package com.example.yamba;
 import android.app.Activity;
 import android.os.Bundle;
 
-
-
-// Se agrega un comentario
 public class StatusActivity extends Activity {
 	
 	

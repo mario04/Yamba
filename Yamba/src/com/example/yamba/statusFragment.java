@@ -2,9 +2,6 @@ package com.example.yamba;
 
 import winterwell.jtwitter.Twitter;
 import winterwell.jtwitter.TwitterException;
-
-
-
 import android.app.Fragment;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -32,6 +29,7 @@ public class statusFragment extends Fragment implements View.OnClickListener{
     private TextView textCount;
     private int defaultTextColor;
     Twitter twitter;	
+    SharedPreferences prefs;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -41,6 +39,7 @@ public class statusFragment extends Fragment implements View.OnClickListener{
         buttonTweet=(Button)view.findViewById(R.id.button_tweet);
         textCount=(TextView)view.findViewById(R.id.textCount);
         buttonTweet.setOnClickListener(this);
+        textCount.setTextColor(Color.GREEN);
         defaultTextColor=textCount.getTextColors().getDefaultColor();
         editStatus.addTextChangedListener(new TextWatcher() {
             @Override
@@ -91,6 +90,7 @@ public class statusFragment extends Fragment implements View.OnClickListener{
             			new Intent(getActivity(), SettingsActivity.class));
             			return "Please update your username and password";
             			}
+            			//YambaClient yambaCloud=new YambaClient(username, password);
             			twitter = new Twitter("student","password");
             			twitter.setAPIRootUrl("http://yamba.marakana.com/api");
             			Twitter.Status status = twitter.updateStatus(statuses[0]);
