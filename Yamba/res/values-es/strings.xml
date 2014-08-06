@@ -3,8 +3,24 @@
 
     <string name="app_name">Yamba</string>
     <string name="button_tweet">tweet</string>
-    <string name="hint_status">Que hay de nuevo?</string>
-    <string name="action_settings">Configuraciones</string>
+    <string name="hint_status">Qué hay de nuevo?</string>
+    <string name="action_settings">Ajustes</string>
     <string name="caracteres">140</string>
+    <string name="username">Nombre de usuario</string>
+    <string name="titleUsername">TitleUsarname</string>
+    <string name="summaryUsername">SummaryUsername</string>
+    <string name="username_summary">Cuál es su nombre de usuario?</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="status_update">Yamba</string>
+    <string name="tweet">Tweet</string>
+    <string name="regresh">Actualizar</string>
+    <string name="purge">Purge</string>
+    <string name="password">Contraseña</string>
+    <string name="password_summary">Cómo es su contraseña?</string>
+    <string name="apiRoot">Intervalo de actualización</string>
+    <string name="apiRoot_Summary">Con qué frecuencia se deben actualizar los datos? </string>
+    <string name="titlePrefs">TitlePrefs</string>
+    <string name="titleRefresh">TitleRefresh</string>
 
 </resources>
