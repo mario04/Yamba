@@ -17,7 +17,7 @@ import android.widget.Toast;
 
 public class RefreshService extends IntentService {
 	static final String TAG = "RefreshService"; //
-	public RefreshService(String name) {
+	public RefreshService() {
 		super(TAG);
 		// TODO Auto-generated constructor stub
 	}
@@ -33,7 +33,7 @@ public class RefreshService extends IntentService {
 	protected void onHandleIntent(Intent intent) {
 		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
 		final String username = prefs.getString("username", "");
-		final String password = prefs.getString("password","");
+		final String password = prefs.getString("password", "");
 		if (TextUtils.isEmpty(username) || TextUtils.isEmpty(password)) {
 			Toast.makeText(this,
 			"Please update your username and password",

@@ -56,6 +56,7 @@ public final class R {
         public static final int caracteres=0x7f060004;
         public static final int hello_world=0x7f06000a;
         public static final int hint_status=0x7f060002;
+        public static final int itemServiceStart=0x7f060014;
         public static final int password=0x7f06000f;
         public static final int password_summary=0x7f060010;
         public static final int purge=0x7f06000e;
@@ -63,7 +64,7 @@ public final class R {
         public static final int status_update=0x7f06000b;
         public static final int summaryUsername=0x7f060007;
         public static final int titlePrefs=0x7f060013;
-        public static final int titleRefresh=0x7f060014;
+        public static final int titleRefresh=0x7f060015;
         public static final int titleUsername=0x7f060006;
         public static final int title_activity_main=0x7f060009;
         public static final int tweet=0x7f06000c;

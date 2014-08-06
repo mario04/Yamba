@@ -21,6 +21,6 @@
     <string name="apiRoot">Refresh Interval</string>
     <string name="apiRoot_Summary">How frequently should date refresh?</string>
     <string name="titlePrefs">TitlePrefs</string>
-    <string name="titleRefresh">TitleRefresh</string>
+    <string name="itemServiceStart">TitleRefresh</string>
 
 </resources>
