@@ -1,7 +1,9 @@
 package com.example.yamba;
 
+import com.marakana.android.yamba.clientlib.YambaClient;
+import com.marakana.android.yamba.clientlib.YambaClientException;
+
 import winterwell.jtwitter.Twitter;
-import winterwell.jtwitter.TwitterException;
 import android.app.Fragment;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -71,34 +73,31 @@ public class statusFragment extends Fragment implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         String status = editStatus.getText().toString();
-        new PostToTwitter().execute(status);
-        Log.d(TAG, "Tweet Enviado");
+       // new PostToTwitter().execute(status);
+        Log.d(TAG, "onClicked with status: " + status);
+        new PostTask().execute(status);
     }
 
-    private final class PostToTwitter extends AsyncTask<String, Integer, String>{
+    private final class PostTask extends AsyncTask<String, Integer, String>{
 
         @Override
-        protected String doInBackground(String... statuses) {
+        protected String doInBackground(String... params) {
         	try{
-            	SharedPreferences prefs = PreferenceManager
-            			.getDefaultSharedPreferences(getActivity()); //
-            			String username = prefs.getString("username", ""); //
+            	SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity()); 
+            			String username = prefs.getString("username", ""); 
             			String password = prefs.getString("password", "");
-            			if (TextUtils.isEmpty(username) ||
-            			TextUtils.isEmpty(password)) { //
-            			getActivity().startActivity(
-            			new Intent(getActivity(), SettingsActivity.class));
+            			if (TextUtils.isEmpty(username) ||TextUtils.isEmpty(password)) { 
+            			getActivity().startActivity(new Intent(getActivity(), SettingsActivity.class));
             			return "Please update your username and password";
             			}
-            			//YambaClient yambaCloud=new YambaClient(username, password);
-            			twitter = new Twitter("student","password");
-            			twitter.setAPIRootUrl("http://yamba.marakana.com/api");
-            			Twitter.Status status = twitter.updateStatus(statuses[0]);
-            			return status.text;
-            }catch (TwitterException e){
+            			YambaClient cloud=new YambaClient(username, password);
+            			cloud.postStatus(params[0]);
+            			
+            			return "Successfully posted";
+            }catch (YambaClientException e){
                 Log.e(TAG, e.toString());
                 e.printStackTrace();
-                return "Failed to post";
+                return "Failed to post to yamba service";
             }
         }
 

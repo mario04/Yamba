@@ -22,7 +22,8 @@ public final class R {
         public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int background=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
     }
     public static final class id {
         public static final int action_purge=0x7f090007;
@@ -32,6 +33,8 @@ public final class R {
         public static final int button_tweet=0x7f090000;
         public static final int editStatus=0x7f090001;
         public static final int fragment_status=0x7f090003;
+        public static final int itemPrefs=0x7f090008;
+        public static final int itemServiceStart=0x7f090009;
         public static final int textCount=0x7f090002;
     }
     public static final class layout {
@@ -41,7 +44,8 @@ public final class R {
     }
     public static final class menu {
         public static final int main=0x7f080000;
-        public static final int status=0x7f080001;
+        public static final int menu=0x7f080001;
+        public static final int status=0x7f080002;
     }
     public static final class string {
         public static final int action_settings=0x7f060003;
@@ -58,6 +62,8 @@ public final class R {
         public static final int regresh=0x7f06000d;
         public static final int status_update=0x7f06000b;
         public static final int summaryUsername=0x7f060007;
+        public static final int titlePrefs=0x7f060013;
+        public static final int titleRefresh=0x7f060014;
         public static final int titleUsername=0x7f060006;
         public static final int title_activity_main=0x7f060009;
         public static final int tweet=0x7f06000c;

@@ -20,5 +20,7 @@
     <string name="password_summary">How do you log in?</string>
     <string name="apiRoot">ApiRoot</string>
     <string name="apiRoot_Summary">ApiRoot_Summary</string>
+    <string name="titlePrefs">TitlePrefs</string>
+    <string name="titleRefresh">TitleRefresh</string>
 
 </resources>
