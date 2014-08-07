@@ -45,8 +45,7 @@ public class RefreshService extends IntentService {
 		try{
 			List<Status> timeline = cloud.getTimeline(20);
 			for (Status status : timeline) { //
-				Log.d(TAG,
-						String.format("%s: %s", status.getUser(),status.getMessage())); //
+				Log.d(TAG,String.format("%s: %s", status.getUser(),status.getMessage())); //
 			}
 			
 		}catch(YambaClientException e){
