@@ -16,6 +16,10 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <service android:name=".RefreshService" />
+        <provider 
+            	android:name="com.example.yamba.StatusProvider"
+				android:authorities="com.example.yamba.StatusProvider"
+				android:exported="false" />
         <activity
             android:name=".StatusActivity"
             android:label="@string/status_update" >
