@@ -22,5 +22,9 @@
     <string name="apiRoot_Summary">How frequently should date refresh?</string>
     <string name="titlePrefs">TitlePrefs</string>
     <string name="itemServiceStart">TitleRefresh</string>
+    <string name="slashdot">Slashdot</string>
+    <string name="texto1">10 minutes ago</string>
+    <string name="texto2">Android just became the #1 OS on the planet.
+	Take that, Microsoft! http://t.co/123</string>
 
 </resources>
